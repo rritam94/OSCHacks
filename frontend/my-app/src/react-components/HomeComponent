@@ -1,0 +1,29 @@
+import React, { useState, useEffect } from 'react';
+import SendIcon from '@mui/icons-material/Send';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+import '../Main/Main.css';
+import CircularProgress from '@mui/material/CircularProgress';
+import GoogleMap from './GoogleMap';
+
+const button_theme = createTheme({
+  palette: { primary: { main: '#ffffff' }, text: { primary: '#141428' } },
+});
+
+async function getDoctors() {
+    const response = await fetch('http://localhost:5000/doctors');
+    const doctors = await response.json();
+    return doctors;
+}
+
+function HomeComponent() {
+  return (
+    <div className="chatbox">
+        <button className="microphone">
+            
+        </button>
+    </div>
+  );
+}
+
+export default HomeComponent;

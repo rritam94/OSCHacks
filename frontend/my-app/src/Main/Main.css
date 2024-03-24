@@ -1,0 +1,517 @@
+body, html{
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+body {
+	font-family: 'VisualBraille', sans-serif;
+  }
+
+.App {
+  text-align: center;
+  font-family: 'VisualBraille', sans-serif;
+}
+
+.product-name {
+  height: 30vmin;
+  pointer-events: none;
+  font-size: 10vw;
+  opacity:1;
+  animation: flicker 2.5s linear reverse infinite;
+  text-shadow: 0 0 15px white;
+}
+
+.App-header {
+  background-color: rgb(20,20,20);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.btn {
+  margin-top: 5vh;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
+  padding: 1%;
+  font-size: 16px;
+  opacity: 0.5;
+  text-decoration: none;
+  transition: opacity 0.5s;
+}
+
+.left-box{
+	height: 90vh;
+	width:60vw;
+	margin-top:5vh;
+	margin-right:2.5vw;
+	background-color: rgb(250,250,250);
+	border-radius: 10%;
+	float:right;
+	opacity: 0.7;
+	max-height: 90vh;
+	overflow-y: auto;
+}
+
+.left-box:hover{
+	opacity: 1;
+}
+
+.right-top-box{
+	background-color: rgb(250,250,250);
+	float: left;
+	width: 30vw;
+	margin-top:5vh;
+	border-radius: 10%;
+	height: 42.5vh;
+	color: rgb(20,20,40);
+	margin-left:2.5vw;
+	opacity:0.7;
+}
+
+#doctors{
+	text-align:center;
+	margin-top: 3.5vh;
+}
+
+@keyframes slideIn {
+	from {
+	  transform: translateX(100%);
+	}
+	to {
+	  transform: translateX(0);
+	}
+  }
+
+.slide-in {
+	animation: slideIn 1s ease-in-out;
+  }
+
+  @keyframes slideInLeft {
+	from {
+	  transform: translateX(-100%);
+	}
+	to {
+	  transform: translateX(0%);
+	}
+  }
+
+  .slide-in-2{
+	animation: slideInLeft 1s ease-in-out;
+  }
+
+.map{
+	margin-left: 1.5vw;
+	margin-top: 1vh;
+}
+.right-top-box:hover{
+	opacity: 1;
+}
+
+.information{
+	height: 50vh;
+	width: 22.5vw;
+	position: fixed;
+	margin-top: 20vh;
+	margin-left: 5vw;
+	border-radius: 10%;
+	z-index: 0;
+	border: 2px solid #ccc;
+}
+
+.txt{
+	width: 80%;
+	color: black;
+	font-size: 3vb;
+	opacity:1;
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	word-wrap:break-word;
+	text-align: center;
+	margin-left: 2.25vw;
+	margin-top: 3vh;
+}
+
+.txt-2{
+	width: 80%;
+	color: black;
+	font-size: 3vb;
+	opacity:1;
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	word-wrap:break-word;
+	text-align: center;
+	margin-left: 2.25vw;
+	margin-top: 10vh;
+}
+
+bold{
+	font-weight:bolder;
+}
+
+.information-right{
+	height: 50vh;
+	width: 22.5vw;
+	position: fixed;
+	margin-top: 20vh;
+	margin-left: 33vw;
+	border-radius: 10%;
+	border: 2px solid #ccc;
+}
+
+.right-bottom-box{
+	background-color: rgb(250,250,250);
+	float: left;
+	width: 30vw;
+	margin-top:5vh;
+	border-radius: 10%;
+	height: 42.5vh;
+	display:block;
+	margin-left:2.5vw;
+	opacity:0.7;
+}
+
+.headline{
+	animation: fadeInAnimation 1s ease-in-out forwards;
+	text-align: center;
+	opacity: 0.5;
+	font-weight: bolder;
+	color:rgb(20,20,40);
+	margin-top:3vh;
+	text-align: center;
+	font-size: 4vb;
+}
+
+.loading-opacity{
+	opacity:0.5;
+}
+#chatbot{
+	background-color: black;
+
+}
+
+#chatbot .rsc-message.user {
+    background-color: black;
+    color: #fff;
+}
+
+#chatbot .rsc-message.bot {
+    background-color: #ddd;
+    color: #333;
+}
+
+.idk{
+	color:white;
+	height: 50vh;
+	width:50vw;
+}
+
+.right-bottom-box:hover{
+	opacity: 1;
+}
+
+.transparent{
+	transform: translateX(150%);
+	margin-top:5vh;
+	font-size: 7.5vb;
+	color:rgb(20,20,40);
+	position: fixed;
+	animation: fadeInAnimation 1s ease-in-out forwards;
+	opacity: 0.5;
+}
+
+.message-container-ai{
+	/* background-color: white; */
+	color: black;
+}
+
+.message-box {
+	background-color: #141428;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	padding: 3px;
+	margin: 2px 0;
+	display: inline-block;
+	white-space: nowrap; 
+	width: 90%;
+  }  
+
+  .ai-message{
+	background-color: white;
+	color: black
+  }
+
+  .message-container {
+	display: block; 
+	margin: 2px 0; 
+	z-index: -1;
+  }
+
+.input{
+	width:40vw;
+	height:7.5vh;
+	background-color: #141428;
+	font-size: 2vb;
+	z-index: 1;
+	padding-left: 2%;
+	color:white;
+	margin-top: 77.5vh;
+	font-weight: bolder;
+	margin-left: 7vw;
+	font-family: 'VisualBraille', sans-serif;
+	border-radius: 15%;
+	overflow:auto;
+}
+
+.chatbox{
+	background-color: rgb(20,20,40);
+	height:1000vh;
+	font-family: 'VisualBraille', sans-serif;
+	
+}	
+
+a{
+	margin-left: 1vw;
+}
+
+.messages{
+	color:white;
+	text-align: center;
+	max-height:60vh;
+	overflow-y: auto;
+	margin-top: -70vh;
+	z-index:-1;
+	flex-grow: 1;
+}
+  
+  @keyframes fadeInAnimation {
+	0% {
+	  opacity: 0.5;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+
+.btn:hover{
+  opacity: 1;
+  scale:1.1;
+  box-shadow: 0 0 3px white;
+}
+
+@keyframes flicker {
+	0% {
+		opacity: 0.1;
+    text-shadow: 0 0 5px white;
+	}
+	5% {
+		opacity: 0.5;
+    text-shadow: 0 0 8px white;
+	}
+	10% {
+		opacity: 0.6;
+    text-shadow: 0 0 9px white;
+	}
+	15% {
+		opacity: 0.85;
+    text-shadow: 0 0 12px white;
+	}
+	25% {
+		opacity: 0.5;
+    text-shadow: 0 0 8px white;
+	}
+	30% {
+		opacity: 1;
+    text-shadow: 0 0 15px white;
+	}
+	35% {
+		opacity: 0.1;
+    text-shadow: 0 0 5px white;
+	}
+	40% {
+		opacity: 0.25;
+    text-shadow: 0 0 7px white;
+	}
+	45% {
+		opacity: 0.5;
+    text-shadow: 0 0 8px white;
+	}
+	60% {
+		opacity: 1;
+    text-shadow: 0 0 15px white;
+	}
+	70% {
+		opacity: 0.85;
+    text-shadow: 0 0 12px white;
+	}
+	80% {
+		opacity: 0.4;
+    text-shadow: 0 0 7px white;
+	}
+	90% {
+		opacity: 0.5;
+    text-shadow: 0 0 8px white;
+	}
+	100% {
+		opacity: 1;
+    text-shadow: 0 0 15px white;
+	}
+}
+
+@keyframes flicker-light {
+	0% {
+		opacity: 0.1;
+    text-shadow: 0 0 5px white;
+    box-shadow: 0 0 5px white;
+	}
+	5% {
+		opacity: 0.5;
+    text-shadow: 0 0 8px white;
+    box-shadow: 0 0 5px white;
+	}
+	10% {
+		opacity: 0.6;
+    text-shadow: 0 0 9px white;
+    box-shadow: 0 0 5px white;
+	}
+	15% {
+		opacity: 0.85;
+    text-shadow: 0 0 12px white;
+    box-shadow: 0 0 5px white;
+	}
+	25% {
+		opacity: 0.5;
+    text-shadow: 0 0 8px white;
+    box-shadow: 0 0 5px white;
+	}
+	30% {
+		opacity: 1;
+    text-shadow: 0 0 15px white;
+    box-shadow: 0 0 5px white;
+	}
+	35% {
+		opacity: 0.1;
+    text-shadow: 0 0 5px white;
+    box-shadow: 0 0 5px white;
+	}
+	40% {
+		opacity: 0.25;
+    text-shadow: 0 0 7px white;
+    box-shadow: 0 0 5px white;
+	}
+	45% {
+		opacity: 0.5;
+    text-shadow: 0 0 8px white;
+    box-shadow: 0 0 5px white;
+	}
+	60% {
+		opacity: 1;
+    text-shadow: 0 0 15px white;
+    box-shadow: 0 0 5px white;
+	}
+	70% {
+		opacity: 0.85;
+    text-shadow: 0 0 12px white;
+    box-shadow: 0 0 5px white;
+	}
+	80% {
+		opacity: 0.4;
+    text-shadow: 0 0 7px white;
+    box-shadow: 0 0 5px white;
+	}
+	90% {
+		opacity: 0.5;
+    text-shadow: 0 0 8px white;
+    box-shadow: 0 0 5px white;
+	}
+	100% {
+		opacity: 1;
+    text-shadow: 0 0 15px white;
+    box-shadow: 0 0 5px white;
+	}
+}
+
+.slide-up {
+	/* animation-name: slideUp;
+	animation-duration: 1s;
+	animation-timing-function: ease; */
+	transform: translateY(-100%);
+	transition: transform 1s ease;
+  }
+  
+  @keyframes slideUp {
+	0% {
+	  transform: translateY(0);
+	}
+	100% {
+	  transform: translateY(-100%);
+	}
+  }
+
+  .microphone{
+	position:absolute;
+	bottom: 5vh;
+	height: 10vh;
+	width: 30vw;
+	background-color: white;
+	font-size: 3vb;
+	border-radius: 5vh;
+	font-family: 'VisualBraille', sans-serif;
+  }
+
+  .microphone:hover{
+	background-color: rgb(200,200,200);
+	cursor: pointer;
+	border:none;
+  }
+
+  .schedule-box{
+	height: 70vh;
+	width:45vw;
+	margin-left: 50vw;	
+	border-radius: 10%;
+	margin-bottom: 10vh;
+	background-color: rgb(230,230,230);
+	opacity: 0.9;
+  }
+
+  .left-side-box{
+	position: absolute;
+	height: 30vh;
+	width: 45vw;
+	margin-right: 50vw;	
+	top:10vh;
+	background-color: rgb(230,230,230);
+	border-radius: 10%;
+	opacity: 0.9;
+  }
+
+  .left-side-bottom-box{
+	position: absolute;
+	height: 30vh;
+	width: 45vw;
+	margin-right: 50vw;	
+	top:50vh;
+	background-color: rgb(230,230,230);
+	border-radius: 10%;
+	opacity: 0.9;
+  }
+
+  .schedule-box:hover{
+	opacity: 1;
+  }
+
+  .left-side-box:hover{
+	opacity: 1;
+  }
+
+  .left-side-bottom-box:hover{
+	opacity: 1;
+  }
